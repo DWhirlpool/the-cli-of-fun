@@ -1,13 +1,13 @@
 from core import amogus, dot, matrix, emojipedia, log
 from os import *
 
-commandlist = ['dot', 'amogus','matrix', 'emojipedia', 'clear', 'help', 'exit']
+commandlist = ['dot', 'amogus','matrix', 'emojipedia', 'clear', 'help', 'log', 'exit']
 
 print('''
      / \----------------------,
      \_,|                     |  
         |    the-cli-of-fun   |
-        |         v2          |
+        |         v3.1        |
         |  ,--------------------  
         \_/___________________/ 
 ''')
@@ -39,6 +39,9 @@ emojipedia -> Shows a lot of emojis
 exit   -> Exit and kill the-cli-of-fun
 help   -> Display commands and information
 matrix -> Shows a matrix effect''')
+        elif command == 'log':
+            log.log('log')
+            print(log.get_log())
         elif command == 'exit':
             log.log('exit')
             exit()
